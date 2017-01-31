@@ -1,0 +1,22 @@
+﻿[
+  {
+    "borrowerGuid": "e1887a45-62cb-4a63-b50f-b9c3c2de63ef",
+    "borrowerIndex": 0,
+    "dob": "0001-01-01T00:00:00",
+    "email": "tunguyen@loandepot.com",
+    "firstName": "Andy",
+    "lastName": "America",
+    "phoneNumber": "(111)111-1111",
+    "ssn": ""
+  },
+  {
+    "borrowerGuid": "b4009bf0-84b0-4372-9f89-a2d8821afb93",
+    "borrowerIndex": 0,
+    "dob": "0001-01-01T00:00:00",
+    "email": "tunguyen2@loandepot.com",
+    "firstName": "Amy",
+    "lastName": "America",
+    "phoneNumber": "(333)333-3333",
+    "ssn": ""
+  }
+]

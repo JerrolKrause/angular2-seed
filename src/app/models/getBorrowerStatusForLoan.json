@@ -1,0 +1,18 @@
+﻿[
+  {
+    "firstName": "Andy",
+    "lastName": "America",
+    "email": "tunguyen@loandepot.com",
+    "invited": true,
+    "confirmed": true,
+    "verified": true
+  },
+  {
+    "firstName": "Amy",
+    "lastName": "America",
+    "email": "tunguyen2@loandepot.com",
+    "invited": true,
+    "confirmed": true,
+    "verified": true
+  }
+]

@@ -1,0 +1,194 @@
+/***** Component Variables *****/
+
+
+
+/***** Component Mixins *****/
+
+
+
+/***** Static CSS *****/
+
+//Alerts
+.alert{
+    & > div{display:inline;}
+    &.alert-danger.icon:before{font-family: FontAwesome;content:"\f071";margin-right:5px;}
+    &.alert-success.icon:before{font-family: FontAwesome;content:"\f164";margin-right:5px;}
+}
+
+//Cards
+.card{
+    margin-bottom: 1.5rem;border-top-left-radius:0;border-top-right-radius:0;@include boxShadow();
+    .card-header > * {margin:0;}
+    &.card-btn{
+      cursor: pointer;border-radius: 0.2rem;overflow:hidden;
+      img{border:1px solid #ccc;}
+    }
+     .table{margin:0!important;}
+}
+.title + .card{border-top: solid 3px #5e9aca;}
+//Modals
+.modal{
+    .nav-tabs{
+        border-color:rgba(0,0,0,.2);padding-left: 10px;
+        .nav-link{border-color:rgba(0,0,0,.2); margin-top: -1px;border-bottom: 0;}
+        .nav-link.active{border-bottom: 0;margin-top: 0px;}
+        & + .modal-content{ border-top:0; border-radius: 0px 0px 3px 3px;}
+    }
+    .modal-content > h2{padding: 1rem;margin: 0;}
+}
+
+//Tooltips
+ .tooltip-inner{
+  text-align:left;padding-left:10px;
+}
+
+.multi-step{
+  .step{
+    //padding: 10px;font-size:13px;background:#f1f1f1 url('../images/step-current.png') no-repeat center right;
+    &.current{background-color:rgba(94, 154, 202, .1);}
+    &.last{ background-image:none;}
+  }
+
+}
+
+//Customize icons
+.fa{
+    &.user-uninvited, &.grey {color: #ccc;}
+    &.user-invited {color: orange;}
+    &.user-registered{color: #49E9FF;}
+    &.user-completed{color: lime;}
+    &.spacer{margin-right: 7px;}
+    &.green{color:#75b534;}
+    &.red{color:#8f0222;}
+    &.yellow{color:#edd000;}
+    &.blue{color:$pos-blue;}
+    &.gray{color:#7b8287;}
+}
+
+//Custom lists
+ul{
+    &.list-selectable{
+        margin:0;padding:0;list-style:none;
+        & ul{margin:0;margin-left:2rem;padding:0;list-style:none;}
+    }
+
+}
+
+.ui-select-match-item{text-align: left;font-size: .75rem;padding: 5px 10px;}
+
+//All things tables
+.table{
+    td{vertical-align:middle;}
+    tr.opacityLow{
+      opacity:0.4;
+      &:hover{opacity:1;}
+    }
+    .highlight{background: #fff8ed;}
+    //Angular sortable table. Requires plugin
+    &.angular-table{
+        margin: 0;
+        thead{
+            font-size:0.75rem;
+            [ts-criteria]{
+                cursor:pointer;position: relative;padding-right: 25px;text-decoration:underline;color:$pos-blue;
+                &:before{font-family: FontAwesome;position:absolute;right:10px;top: 50%;transform: translateY(-50%);content: "\f0dc";}
+                &.tablesort-asc:before{content: "\f0de";}
+                &.tablesort-desc:before{content: "\f0dd";}
+                &:hover{ background-color: rgba(0,0,0,.05);}
+            }
+        }
+        tbody td{padding: 0.5rem;}
+        h3{font-size: 1.3rem;}
+        .showIfLast{display:none;}
+    }//end angular-table
+
+
+    &.table-borrowerInfo{
+          font-size: 13px;
+      td:first-child {
+          color: #ccc;
+          padding-left: 10px;
+      }
+    }
+
+    &.table-stats{
+      font-size:0.85rem;
+      .thead-default th{color:#666b6f;font-size: 12px;}
+    }
+    .filter .form-control{font-weight:normal;font-size:.75rem;}
+    //Messages table{
+    @include media-breakpoint-up(md){
+        &.table-messages{
+            th:nth-child(1){ width: 75px;}
+            th:nth-child(2){ width: 170px;}
+            th:nth-child(3){ width: 180px;}
+        }
+    }
+}
+
+
+//Accordians. Dropdown icons are inserted with before
+.accordion {
+    .panel-title{
+        .fa{margin-right:7px;}
+    }
+    .panel{margin-bottom: -8px;}
+    .accordion-toggle{@extend .card-header;padding-left: 10px;position: relative;}
+    
+    [data-toggle="collapse"]{
+        cursor:pointer;display:block;color:black;
+        &:before{font-family: FontAwesome;content: "\f078";position:absolute;right:15px;@include transition();transform: rotate(0deg);}
+        &.collapsed:before{@include transition();transform: rotate(180deg);color:black;}
+    }
+    .panel-open {
+        &.panel{margin-bottom:0;}
+        .panel-body{margin-top: -9px;}
+        [data-toggle="collapse"]:before{@include transition();transform: rotate(180deg);color:black;}
+    }
+}
+
+//Email CC box
+.contacts-cc{
+    fieldset {float:left;padding-right:15px;margin-bottom:0;}
+}
+
+.review-docs{ padding: 10px;padding-bottom:20px;color: #fff;background: rgba(0,0,0,0.85);}
+
+//Dashboard
+.total-docs{
+    color: #a90329;
+    font-size: larger;
+}
+.status-count{
+    padding: 0 0 0 10px;
+}
+.pull-xs-left {
+margin-right: 5px;}
+
+
+.card-block{
+
+    padding-bottom: 2.25REM;
+}
+
+.alert-stat{
+    color: #a90329;
+    font-weight: bold;
+}
+
+.card .table {
+    margin-bottom: 20px;}
+
+label.filter {
+    display: none;
+}
+.btn.btn-work{
+   background: linear-gradient(#a90329 0%, #8f0222 44%, #6d0019 100%);
+    border: solid 1px #6F0119;
+}
+
+//UI-Select 
+.ui-select-container {
+    &.ui-select-bootstrap {padding: 5px 4px 2px;}
+    .ui-select-search {width: 95% !important;}
+}
