@@ -4,4 +4,11 @@
     <hr/>
     
     <button class="btn">Open A Modal</button>
+    <hr/>
+
+    <div class="alert alert-danger icon" *ngIf="errorLoading">Error loading user information</div>
+    HTTP Request from a service: {{user.UserName}} is a {{user.Title}}<br/>
+    <a role="button" (click)="showErrorMessage()">Toggle Error State</a>
+    <hr/>
+
 </div>

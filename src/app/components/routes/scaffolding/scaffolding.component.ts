@@ -2,27 +2,43 @@ import {
     Component,
     OnInit
 } from '@angular/core';
-
+import { ScaffoldService } from '../../../services/scaffold.service'
 
 
 @Component({
     selector: 'scaffolding',  // <scaffolding></scaffolding>
     // We need to tell Angular's Dependency Injection which providers are in our app.
     //providers: [],
-    // Our list of styles in our component. We may add more to compose many styles together
-    //styleUrls: ['./header.component.css'],
-    // Every Angular template is first compiled by the browser before Angular runs it's compiler
     templateUrl: './scaffolding.component.html'
 })
 
+
 export class ScaffoldingComponent implements OnInit {
-  
+
+    user: any = {}
+    errorLoading: boolean = false
+
     // TypeScript public modifiers
     constructor(
-       
+        private scaffoldService: ScaffoldService
     ) { }
 
     public ngOnInit() {
+        //this.userService.getUserProfile('jkrause').subscribe((res) => { this.user = res })
+        // res => this.user = res
+        this.scaffoldService.getUserProfile('jkrause').subscribe(
+            res => this.user = res,
+            error => this.errorLoading = true
+        )
     }
+
+
+    /**
+     * Toggle the error message
+     */
+    public showErrorMessage() {
+        this.errorLoading = !this.errorLoading
+    }//showErrorMessage
+
     
 }

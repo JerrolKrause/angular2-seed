@@ -111,8 +111,7 @@
     <TypeScriptCompile Include="src\app\components\routes\scaffolding\scaffolding.component.ts" />
     <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
-    <TypeScriptCompile Include="src\app\services\borrower.service.ts" />
-    <TypeScriptCompile Include="src\app\services\user.service.ts" />
+    <TypeScriptCompile Include="src\app\services\scaffold.service.ts" />
     <TypeScriptCompile Include="src\custom-typings.d.ts" />
     <TypeScriptCompile Include="src\main.browser.aot.ts" />
     <TypeScriptCompile Include="src\main.browser.ts" />

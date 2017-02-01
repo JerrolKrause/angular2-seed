@@ -1,4 +1,3 @@
-/// <reference path="services/user.service.ts" />
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -27,7 +26,8 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 
 //Services
-import { UserService } from './services/user.service';
+//import { CacheService } from './services/cache.service';
+import { ScaffoldService } from './services/scaffold.service';
 
 // App is our top level component
 import { AppComponent } from './app.component';
@@ -81,9 +81,9 @@ type StoreType = {
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
-    ENV_PROVIDERS,
+      ENV_PROVIDERS,
       APP_PROVIDERS,
-      UserService
+      ScaffoldService
   ]
 })
 export class AppModule {
