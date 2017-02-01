@@ -38,12 +38,12 @@
     <Content Include="config\webpack.github-deploy.js" />
     <Content Include="config\webpack.prod.js" />
     <Content Include="config\webpack.test.js" />
-    <Content Include="index.html" />
     <Content Include="karma.conf.js" />
     <Content Include="protractor.conf.js" />
     <Content Include="src\app\components\masterpage\footer\footer.component.html" />
     <Content Include="src\app\components\masterpage\header\header.component.html" />
     <Content Include="src\app\components\masterpage\layout-main\layout-main.component.html" />
+    <Content Include="src\app\components\masterpage\nav-main\nav-main.component.html" />
     <Content Include="src\app\components\routes\home\home.component.html" />
     <Content Include="src\assets\fonts\fontawesome\fontawesome-webfont.svg" />
     <Content Include="src\assets\humans.txt" />
@@ -100,6 +100,8 @@
     <TypeScriptCompile Include="src\app\components\masterpage\header\index.ts" />
     <TypeScriptCompile Include="src\app\components\masterpage\layout-main\index.ts" />
     <TypeScriptCompile Include="src\app\components\masterpage\layout-main\layout-main.component.ts" />
+    <TypeScriptCompile Include="src\app\components\masterpage\nav-main\index.ts" />
+    <TypeScriptCompile Include="src\app\components\masterpage\nav-main\nav-main.component.ts" />
     <TypeScriptCompile Include="src\app\components\routes\home\home.component.ts" />
     <TypeScriptCompile Include="src\app\components\routes\home\index.ts" />
     <TypeScriptCompile Include="src\app\components\routes\no-content\index.ts" />

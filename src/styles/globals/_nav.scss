@@ -6,6 +6,8 @@
 
 /***** Static CSS *****/
 
+.navbar, .navbar-brand{color:white;}
+
 .navbar-toggler{
     &:after{ font-family: FontAwesome;content: "\f077";@include transition();display: inline-block;transform: rotate(180deg);font-size:75%;}
     &.collapsed:after{@include transition();transform: rotate(0deg);}

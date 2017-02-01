@@ -31,11 +31,14 @@ import { AppComponent } from './app.component';
 //Masterpage
 import { LayoutMainComponent } from './components/masterpage/layout-main';
 import { HeaderComponent } from './components/masterpage/header';
+import { NavMainComponent } from './components/masterpage/nav-main';
 import { FooterComponent } from './components/masterpage/footer';
 
 //Routes
 import { HomeComponent } from './components/routes/home';
 import { NoContentComponent } from './components/routes/no-content';
+import { ScaffoldingComponent } from './components/routes/scaffolding';
+
 
 //Styles
 import '../styles/styles.scss';
@@ -63,7 +66,9 @@ type StoreType = {
       HomeComponent,
       NoContentComponent,
       HeaderComponent,
-      FooterComponent
+      NavMainComponent,
+      FooterComponent,
+      ScaffoldingComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
