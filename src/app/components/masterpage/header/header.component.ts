@@ -1,31 +1,24 @@
 import {Component, OnInit} from '@angular/core';
-//import { BorrowerService } from '../../../services/borrower.service'
+import { UserService } from '../../../services/user.service'
 
 @Component({
-    selector: 'header-component',  // <home></home>
-    // We need to tell Angular's Dependency Injection which providers are in our app.
-    //providers: [],
-    // Our list of styles in our component. We may add more to compose many styles together
-    //styleUrls: ['./header.component.css'],
-    // Every Angular template is first compiled by the browser before Angular runs it's compiler
+    selector: 'header-component',
+    providers: [UserService],
     templateUrl: './header.component.html'
 })
+
 export class HeaderComponent implements OnInit {
 
-    User: any = {}
+    user: any = {}
 
     constructor(
-       // private borrowerService: BorrowerService
+        private userService: UserService
     ) {
-        //this.borrowerService.GetUserProfile().subscribe(data => this.User = data);
-
-        //this.borrowerService.GetUserProfile().subscribe(data => this.User = data);
-        //this.borrowerService.GetUserProfile().subscribe((res) => { console.log(res);  });
-
-        //this.User = this.borrowerService.GetUserProfile().subscribe()
+        this.userService.getUserProfile('jkrause').subscribe((res) => { this.user = res })
     }
 
     public ngOnInit() {
+        this.userService.getUserProfile('jkrause').subscribe((res) => { this.user = res })
     }
 
 }

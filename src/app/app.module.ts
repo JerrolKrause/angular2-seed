@@ -1,3 +1,4 @@
+/// <reference path="services/user.service.ts" />
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -24,6 +25,9 @@ import { ROUTES } from './app.routes';
 
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
+
+//Services
+import { UserService } from './services/user.service';
 
 // App is our top level component
 import { AppComponent } from './app.component';
@@ -78,7 +82,8 @@ type StoreType = {
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
-    APP_PROVIDERS
+      APP_PROVIDERS,
+      UserService
   ]
 })
 export class AppModule {
