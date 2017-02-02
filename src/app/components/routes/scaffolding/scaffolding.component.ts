@@ -2,11 +2,11 @@ import {
     Component,
     OnInit
 } from '@angular/core';
-import { ScaffoldService } from '../../../services/scaffold.service'
+import { ScaffoldService } from '../../../services/scaffold.service' //Import the service. Note that you have to know the path and do NOT include the .ts extension
 
 
 @Component({
-    selector: 'scaffolding',  // <scaffolding></scaffolding>
+    selector: 'scaffolding',  // <scaffolding></scaffolding> <-- Include in HTML with this
     // We need to tell Angular's Dependency Injection which providers are in our app.
     //providers: [],
     templateUrl: './scaffolding.component.html'
@@ -24,12 +24,12 @@ export class ScaffoldingComponent implements OnInit {
     ) { }
 
     public ngOnInit() {
-        //this.userService.getUserProfile('jkrause').subscribe((res) => { this.user = res })
-        // res => this.user = res
+        
         this.scaffoldService.getUserProfile('jkrause').subscribe(
             res => this.user = res,
             error => this.errorLoading = true
         )
+
     }
 
 
