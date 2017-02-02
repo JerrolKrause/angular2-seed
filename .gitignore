@@ -71,3 +71,4 @@ dll/
 *.ngsummary.json
 *.shim.ngstyle.ts
 obj/
+bin/
