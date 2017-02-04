@@ -17,6 +17,7 @@ export class ScaffoldingComponent implements OnInit {
 
     user: any = {}
     errorLoading: boolean = false
+    sampleData: any = {first: 'j', last: 'k'};
 
     // TypeScript public modifiers
     constructor(
@@ -39,6 +40,11 @@ export class ScaffoldingComponent implements OnInit {
     public showErrorMessage() {
         this.errorLoading = !this.errorLoading
     }//showErrorMessage
+
+
+    sampleCallback() {
+        console.log('callback function was called');
+    }
 
     
 }

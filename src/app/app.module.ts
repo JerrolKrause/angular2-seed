@@ -43,6 +43,11 @@ import { HomeComponent } from './components/routes/home';
 import { NoContentComponent } from './components/routes/no-content';
 import { ScaffoldingComponent } from './components/routes/scaffolding';
 
+//UI components
+import { ButtonModalComponent } from './components/ui/buttons/button-modal';
+
+//Modals
+import { SampleModalContentComponent } from './components/ui/modals/sample-modal-content';
 
 //Styles
 import '../styles/styles.scss';
@@ -72,13 +77,19 @@ type StoreType = {
       HeaderComponent,
       NavMainComponent,
       FooterComponent,
-      ScaffoldingComponent
+      ScaffoldingComponent,
+      ButtonModalComponent,
+      SampleModalContentComponent
+  ],
+  entryComponents: [
+    SampleModalContentComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
+    NgbModule.forRoot()
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
       ENV_PROVIDERS,
