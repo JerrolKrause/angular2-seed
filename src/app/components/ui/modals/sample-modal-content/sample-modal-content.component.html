@@ -1,0 +1,16 @@
+<div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cancel')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="alert alert-danger icon" [hidden]="!error">{{ error }}</div>
+
+    <p>Data passed down: </p>
+    <div>{{model | json}}</div>
+</div>
+<div class="modal-footer justify-content-between">
+    <button type="button" class="btn btn-outline-danger" href="#" aria-label="Close" (click)="activeModal.dismiss('Cancel')">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="handleSubmit()">Submit</button>
+</div>

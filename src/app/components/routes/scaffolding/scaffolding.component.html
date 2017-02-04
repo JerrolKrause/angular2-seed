@@ -3,7 +3,10 @@
     <p>Useful templating and code examples for rapid development.</p>
     <hr/>
     
-    <button class="btn">Open A Modal</button>
+    <div><i>In progress...</i></div>
+    <button-modal [model]="sampleData" [callback]="sampleCallback" modalName="sample" modalSize="lg" classes="btn btn-outline-primary">Open a Modal</button-modal>
+    <button-modal [model]="sampleData" [callback]="sampleCallback" modalName="sample" modalSize="sm" classes="btn btn-outline-warning btn-sm">Open a different modal</button-modal>
+
     <hr/>
 
     <div class="alert alert-danger icon" *ngIf="errorLoading">Error loading user information</div>
